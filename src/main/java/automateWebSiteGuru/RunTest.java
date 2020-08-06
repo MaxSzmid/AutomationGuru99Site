@@ -9,20 +9,22 @@ public class RunTest {
 	public static void main(String[] args) throws InterruptedException {
 		// select the browser
 		WebDriver driver = SelectBrowsers.selectBrowser("chrome");
-		// get the URL
 		driver.get("http://demo.guru99.com/V1/index.php");
-		// create an object with which you are going to execute the test
+
+		// creating an object to execute the "Login" test
 		// testCase 1
 		LoginPage page = new LoginPage(driver);
 		page.setUser("mngr276741");
 		page.setPassword("YsaqAjY");
-		page.clickOnButton();
+		page.clickOnButtonLogin();
 		Thread.sleep(4000);
 
+		// creating an object to execute the "Home page" test
 		// testCase 2
 		HomePage homePage = new HomePage(driver);
 		homePage.clickOnNewCustomer();
 
+		// creating an object to execute the "Create new customer" test
 		// testCase 3
 		NewCustomerPage newCustomer = new NewCustomerPage(driver);
 		newCustomer.setName("Carlos");
@@ -36,16 +38,15 @@ public class RunTest {
 		newCustomer.setEmail("testEmail@email.com");
 		Thread.sleep(4000);
 
+		// creating an object to execute the "Create new account test"
 		// testCase 4
 		NewAccount newAccount = new NewAccount(driver);
+		// This action redirect you to the page "New Account "because the button" New
+		// account" isn't clickable
 		newAccount.goToNewAccount(driver);
 		newAccount.setAccountID("1");
-		//newAccount.setAccountType("current");
 		newAccount.setInitialDeposit("$500");
 		Thread.sleep(4000);
-		
-		System.out.println("Test success");
-
 	}
 
 }

@@ -18,15 +18,28 @@ public class LoginPage {
 		PageFactory.initElements(driver, this);
 	}
 
+	/**
+	 * set up the username
+	 * 
+	 * @param String user
+	 */
 	public void setUser(String user) {
 		this.user.sendKeys(user);
 	}
 
+	/**
+	 * set up the password
+	 * 
+	 * @param String password
+	 */
 	public void setPassword(String password) {
 		this.password.sendKeys(password);
 	}
 
-	public void clickOnButton() {
+	/**
+	 * make click on login button
+	 */
+	public void clickOnButtonLogin() {
 		this.buttonLogIn.click();
 	}
 

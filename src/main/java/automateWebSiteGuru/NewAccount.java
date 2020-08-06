@@ -28,16 +28,22 @@ public class NewAccount {
 	@FindBy(xpath = "//*[@name='reset']")
 	private WebElement resetButton;
 	
-
+	
 	public void goToNewAccount(WebDriver driver) {
 		driver.get("http://demo.guru99.com/V1/html/addAccount.php");
 		
 	}
-
+	/**
+	 * 
+	 * @param String accountID 
+	 */
 	public void setAccountID(String accountID) {
 		this.accountID.sendKeys(accountID);
 	}
-
+	/**
+	 * 
+	 * @param String accounType
+	 */
 	public void setAccountType(String accounType) {
 		try {
 		    Select select = new Select(this.goToNewAccount.findElement(By.xpath("//*[@name='selaccount']")));
@@ -46,15 +52,22 @@ public class NewAccount {
 			System.out.println("El elemento seleccionado no existe \n" + e);
 		}
 	}
-
+	/**
+	 * 
+	 * @param String initialDeposit
+	 */
 	public void setInitialDeposit(String initialDeposit) {
 		this.initialDeposit.sendKeys(initialDeposit);
 	}
-
-	public void clickOnSubmit() {
+	/**
+	 * Make click on Submit button
+	 */
+	public void clickOnSubmitButton() {
 		this.submitButton.click();
 	}
-
+	/**
+	 * Make click on reset button
+	 */
 	public void clickOnResetButton() {
 		this.resetButton.click();
 	}

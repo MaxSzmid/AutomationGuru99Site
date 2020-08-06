@@ -42,11 +42,17 @@ public class NewCustomerPage {
 	public NewCustomerPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
-
+	/**
+	 * 
+	 * @param String nameCustomer
+	 */
 	public void setName(String nameCustomer) {
 		this.nameCustomer.sendKeys(nameCustomer);
 	}
-
+	/**
+	 * set the gender using the radiobuttons
+	 * @param gender
+	 */
 	public void setGender(String gender) {
 
 		if (gender.equalsIgnoreCase("male")) {
@@ -55,36 +61,59 @@ public class NewCustomerPage {
 			this.Gender.get(1).click();
 		}
 	}
-
+	/**
+	 * 	set the Date of birth(dob)
+	 * @param String dob
+	 */
 	public void setDOB(String dob) {
 		this.DOB.sendKeys(dob);
 	}
-
+	/**
+	 * 
+	 * @param String adress
+	 */
 	public void setAdress(String adress) {
 		this.adress.sendKeys(adress);
 	}
-
+	/**
+	 * 
+	 * @param String city
+	 */
 	public void setCity(String city) {
 		this.city.sendKeys(city);
 	}
-
+	/**
+	 * 
+	 * @param String state
+	 */
 	public void setState(String state) {
 		this.state.sendKeys(state);
 	}
-
+	/**
+	 * Set your secret pin min 6 digits
+	 * @param String pin
+	 */
 	public void setPIN(String pin) {
 		this.pin.sendKeys(pin);
 	}
-
+	/**
+	 * 
+	 * @param String phone
+	 */
 	public void setPhone(String phone) {
 		this.phone.sendKeys(phone);
 
 	}
-
+	/**
+	 * 
+	 * @param String email
+	 */
 	public void setEmail(String email) {
 		this.email.sendKeys(email);
 	}
-
+	/**
+	 * make click on submit button
+	 */
 	public void clickOnSubmitButton() {
 		this.submit.click();
 	}

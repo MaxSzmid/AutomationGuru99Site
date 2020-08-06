@@ -17,10 +17,17 @@ public class HomePage {
 	@FindBy(linkText = "New Customer")
 	private WebElement newCustomerButton;
 
+	/**
+	 * make click on the button New Account
+	 * @deprecated
+	 */
 	public void goToNewAccount() {
 		this.newAccountButton.click();
 	}
-
+	
+	/**
+	 * make click on the button New Account
+	 */
 	public void clickOnNewCustomer() {
 		this.newCustomerButton.click();
 	}
