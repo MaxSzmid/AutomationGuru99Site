@@ -44,7 +44,8 @@ public class RunTest {
 		NewAccount newAccount = new NewAccount(driver);
 		newAccount.goToNewAccount(driver);
 		// As the button doesn't work well, i decided to redirect manually to the "New account" page, but this isn't OK
-		newAccount.setAccountID("1");
+		newAccount.setAccountID("123");
+		newAccount.setAccountType("current");
 		newAccount.setInitialDeposit("$500");
 		System.out.println("test case 4 excecuted");
 		Thread.sleep(4000);
